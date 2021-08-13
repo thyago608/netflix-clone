@@ -14,8 +14,6 @@ export function ListMovie({title, movies}:Props){
 
    const url = 'https://image.tmdb.org/t/p/w300';
 
-   console.log(movies);
-
    return(  
        <Container>
                 <h2>{title}</h2>

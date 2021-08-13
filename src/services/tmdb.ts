@@ -65,6 +65,23 @@ const tmdb = {
                 items:await loadMovies(`/discover/movie?with_genres=99&language=pt-BR&api_key=${key}`)
             }
         ]
+    },
+    getMovieInfo: async(id:string, type:'tv'|'movie')=>{
+        let info = null;
+
+        if(id){
+            switch(type){
+                case 'movie':
+                    info = await loadMovies(`/movie/${id}?language=pt-BR&api_key=${key}`);
+                break;
+
+                case 'tv':
+                    info = await loadMovies(`/tv/${id}?language=pt-BR&api_key=${key}`);
+                break;
+            }
+        }
+
+
     }
 }
 
