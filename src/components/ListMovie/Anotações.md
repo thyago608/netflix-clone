@@ -13,4 +13,21 @@ const url = 'https://image.tmdb.org/t/p/w300';
 
 w300 = É o tamanho da imagem, nesse caso 300px
 
-Caso fosse utilizado o valor 'original', a imagem iria vir de acordo 
+Caso fosse utilizado o valor 'original', a imagem iria vir com o seu tamanho original
+
+
+# Movimentando a lista de filmes
+
+Para isso foi necessário criar 3 elementos:
+
+`Movies` Componente que irá conter a lista de filmes.
+
+`List` Componente que será a lista de filmes.
+
+`.movie` - Elemento que irá agrupar as informações de cada filme.
+
+
+Sendo que o `Movies` terá um `overflow-x:hidden`, pois caso o tamanho do seu conteúdo for maior que o mesmo será cortado.
+
+* DICA:
+    Na imagem dentro de `.movie`, foi utilizado um `scale(0.9)`, isso fará a imagem ter 90% do tamanho do seu elemento pai. Mas em seu hover será `scale(1)`, isso fará a imagem voltar a possuir os 100% do seu elemento pai.

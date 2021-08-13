@@ -22,9 +22,11 @@ export const List = styled.div`
 
     .movie{
         width: 10rem;
+        cursor:pointer;
 
         img{
             transform: scale(0.9);
+            transition: transform ease 0.2s;
 
             &:hover{
                 transform: scale(1);
