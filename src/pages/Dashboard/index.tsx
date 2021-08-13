@@ -6,8 +6,9 @@ import { Container } from './styles';
 
 
 export type Movie = {
-    id:number;
-    poster_path:string;
+    id:number; 
+    poster_path:string;   //Capa do filme
+    original_title:string;  //Título do filme
 };
 
 type MovieCategories = {
@@ -31,7 +32,6 @@ export function Dashboard(){
         loadMovies();
     },[])
 
-    console.log(moviesCategories)
 
     return(
         <Container>
