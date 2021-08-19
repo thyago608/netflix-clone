@@ -5,6 +5,10 @@ import { ListMovie } from '../../components/ListMovie';
 import { FeaturedMovie } from '../../components/FeaturedMovie';
 import { Container } from './styles';
 
+type FilmGenre = {
+    id:number;
+    name:string;
+}
 
 export type Movie = {
     id:number; 
@@ -12,6 +16,11 @@ export type Movie = {
     original_title:string;  //Título do filme
     original_name:string;
     backdrop_path:string; //Imagem de fundo  **OBS: Essa propriedade existe apenas nos 'orignais' Neftlix 
+    vote_average:string;
+    number_of_seasons:number;
+    overview:string;
+    genres:FilmGenre[];
+
 };
 
 type MovieCategories = {
@@ -50,7 +59,6 @@ export function Dashboard(){
 
         loadMovies();
     },[])
-
 
     return(
         <Container>
