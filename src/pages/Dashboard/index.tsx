@@ -10,6 +10,8 @@ export type Movie = {
     id:number; 
     poster_path:string;   //Capa do filme
     original_title:string;  //Título do filme
+    original_name:string;
+    backdrop_path:string; //Imagem de fundo  **OBS: Essa propriedade existe apenas nos 'orignais' Neftlix 
 };
 
 type MovieCategories = {
@@ -22,7 +24,7 @@ type MovieCategories = {
 
 export function Dashboard(){
     const [moviesCategories, setMoviesCategories] = useState<MovieCategories[]>([]);
-    const [featuredMovie, setFeaturedMovie] = useState<MovieCategories>({} as MovieCategories);
+    const [featuredMovie, setFeaturedMovie] = useState<Movie>({} as Movie);
 
     useEffect(()=>{
         const loadMovies = async() =>{
@@ -41,6 +43,9 @@ export function Dashboard(){
             //Filme aletório
             const chosen = filteringHighlighted.items.results[allowedIndex];
 
+            const chosenInfo = await tmdb.getMovieInfo(chosen.id,'tv');
+
+            setFeaturedMovie(chosenInfo);
         }
 
         loadMovies();
@@ -49,8 +54,9 @@ export function Dashboard(){
 
     return(
         <Container>
-            {moviesCategories.map((movie)=>(
-                <ListMovie key={movie.title} title={movie.title} movies={movie.items.results}/>
+            {featuredMovie && <FeaturedMovie movie={featuredMovie}/>}
+            {moviesCategories.map((category)=>(
+                <ListMovie key={category.title} title={category.title} movies={category.items.results}/>
             ))}
         </Container>
     );

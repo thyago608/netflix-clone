@@ -27,7 +27,7 @@ Para isso foi necessário criar 3 elementos:
 `.movie` - Elemento que irá agrupar as informações de cada filme.
 
 
-Sendo que o `Movies` terá um `overflow-x:hidden`, pois caso o tamanho do seu conteúdo for maior que o mesmo será cortado.
+Sendo que o `Movies` terá um `overflow-x:hidden`, pois caso o tamanho do seu conteúdo for maior a sua largura o mesmo será cortado.
 
 * DICA:
     Na imagem dentro de `.movie`, foi utilizado um `scale(0.9)`, isso fará a imagem ter 90% do tamanho do seu elemento pai. Mas em seu hover será `scale(1)`, isso fará a imagem voltar a possuir os 100% do seu elemento pai.

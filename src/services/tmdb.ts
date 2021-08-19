@@ -78,10 +78,13 @@ const tmdb = {
                 case 'tv':
                     info = await loadMovies(`/tv/${id}?language=pt-BR&api_key=${key}`);
                 break;
+
+                default:
+                break;
             }
         }
 
-
+        return info;
     }
 }
 
