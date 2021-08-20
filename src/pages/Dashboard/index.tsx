@@ -69,6 +69,10 @@ export function Dashboard(){
             {moviesCategories.map((category)=>(
                 <ListMovie key={category.title} title={category.title} movies={category.items.results}/>
             ))}
+
+            <footer>
+                <p>Cloning the Neflix<span role="img" arial-label="heart">❤️</span> home page</p>
+            </footer>
         </Container>
     );
 }
