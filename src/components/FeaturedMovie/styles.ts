@@ -20,7 +20,7 @@ export const Container = styled.div`
             width: inherit;
             height: inherit;
 
-            background: linear-gradient(to right, #111 30%, transparent 70%);
+            background: linear-gradient(to right, #000000 30%, transparent 70%);
             
             display: flex;
             align-items: center;
@@ -36,7 +36,7 @@ export const MovieInfo = styled.section`
     strong, span{
         display: block;
     }
-
+    
     .original-name{
         font-size:3.5rem;
     }
@@ -57,11 +57,19 @@ export const MovieInfo = styled.section`
 
     .overview{
         margin-top: 1rem;
-        font-size: 1.25rem;
-        font-weight: normal;
-        color: #9999;
-
         max-width: 40%;    // A transição ocorre nos 30%
+        
+        display: -webkit-box;
+        -webkit-line-clamp:5;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        p{
+            font-size: 1.25rem;
+            font-weight: normal;
+            color: #9999;
+        }
     }
 
     .container-buttons{

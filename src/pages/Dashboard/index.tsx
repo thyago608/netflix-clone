@@ -1,8 +1,8 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import tmdb from '../../services/tmdb';
+import React,{ useState, useEffect } from 'react';
 import { ListMovie } from '../../components/ListMovie';
 import { FeaturedMovie } from '../../components/FeaturedMovie';
+import { Header } from '../../components/Header';
+import tmdb from '../../services/tmdb';
 import { Container } from './styles';
 
 type FilmGenre = {
@@ -64,6 +64,7 @@ export function Dashboard(){
 
     return(
         <Container>
+            <Header/>
             {featuredMovie && <FeaturedMovie movie={featuredMovie}/>}
             {moviesCategories.map((category)=>(
                 <ListMovie key={category.title} title={category.title} movies={category.items.results}/>

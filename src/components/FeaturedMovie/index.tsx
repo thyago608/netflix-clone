@@ -32,8 +32,10 @@ export function FeaturedMovie({movie}:Props){
                                 movie.number_of_seasons !== 1 ? 's':''}
                             </span>
                         </div>
-                        <p className="overview">{movie.overview}</p>
 
+                        <div className="overview">
+                            <p>{movie.overview}</p>
+                        </div>
                         <div className="container-buttons">
                             <Button className="button-play">
                                 <BiPlay/>
