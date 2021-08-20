@@ -21,10 +21,11 @@ export const Container = styled.div`
             height: inherit;
 
             background: linear-gradient(to right, #111 30%, transparent 70%);
-            padding-left: 2rem;
             
             display: flex;
             align-items: center;
+
+            padding: 4.5rem 0 10rem 2rem;
         }
     }
 `;
@@ -37,7 +38,7 @@ export const MovieInfo = styled.section`
     }
 
     .original-name{
-        font-size:4rem;
+        font-size:3.5rem;
     }
 
     .description{
@@ -45,16 +46,13 @@ export const MovieInfo = styled.section`
         font-size: 1.15rem;
 
         max-width:275px;
+
         display: flex;
         justify-content: space-between;
 
         .average{
             color: #46d369;
         }
-
-        .year{}
-
-        .number-of-seasons{}
     }
 
     .overview{

@@ -10,6 +10,7 @@ export const Container = styled.section`
     }
 
     margin-left: 2rem;
+    margin-top: -10rem;
 `;
 
 export const Movies = styled.div`

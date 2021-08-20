@@ -31,3 +31,6 @@ Sendo que o `Movies` terá um `overflow-x:hidden`, pois caso o tamanho do seu co
 
 * DICA:
     Na imagem dentro de `.movie`, foi utilizado um `scale(0.9)`, isso fará a imagem ter 90% do tamanho do seu elemento pai. Mas em seu hover será `scale(1)`, isso fará a imagem voltar a possuir os 100% do seu elemento pai.
+
+
+Foi dado um margin-top negativo, para que o mesmo suba no componente `FeatureMovie`. Onde no mesmo, foi dado um padding-bottom, para que o conteúdo de `ListMovie` não fique em cima do conteúdo de `FeatureMovie`.
