@@ -35,6 +35,7 @@ type MovieCategories = {
 export function Dashboard(){
     const [moviesCategories, setMoviesCategories] = useState<MovieCategories[]>([]);
     const [featuredMovie, setFeaturedMovie] = useState<Movie>({} as Movie);
+    const [headerBlack, setHeaderBlack] = useState(false);
 
     useEffect(()=>{
         const loadMovies = async() =>{
@@ -61,10 +62,9 @@ export function Dashboard(){
         loadMovies();
     },[])
 
-
     return(
         <Container>
-            <Header/>
+            <Header />
             {featuredMovie && <FeaturedMovie movie={featuredMovie}/>}
             {moviesCategories.map((category)=>(
                 <ListMovie key={category.title} title={category.title} movies={category.items.results}/>

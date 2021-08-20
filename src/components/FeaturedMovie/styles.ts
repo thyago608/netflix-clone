@@ -14,7 +14,7 @@ export const Container = styled.div`
             Onde o preto ocupa 10% e o transparent ocupará 90%
             O padrão é 50% do preto e 50% do transparente (nesse caso)
         */
-        background: linear-gradient(to top, #111 10%, transparent 90%); 
+        background: linear-gradient(to top, #000000 10%, transparent 90%); 
     
         .horizontalTransparency{
             width: inherit;

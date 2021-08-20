@@ -4,7 +4,7 @@ import { BiPlay, BiPlus } from "react-icons/bi";
 
 import { Container, MovieInfo, Button } from './styles';
 
-type Props = {
+interface Props {
     movie: Movie;
 };
 
