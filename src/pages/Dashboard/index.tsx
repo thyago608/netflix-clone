@@ -20,6 +20,7 @@ export type Movie = {
     number_of_seasons:number;
     overview:string;
     genres:FilmGenre[];
+    first_air_date:string;
 
 };
 
@@ -59,6 +60,7 @@ export function Dashboard(){
 
         loadMovies();
     },[])
+
 
     return(
         <Container>

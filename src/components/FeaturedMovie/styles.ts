@@ -27,3 +27,5 @@ export const Container = styled.div`
 
 export const MovieInfo = styled.section`
 `;
+
+export const Button = styled.button``;
