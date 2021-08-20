@@ -9,7 +9,7 @@ export const Container = styled.section`
         margin-bottom: 2rem;
     }
 
-    padding-left: 2rem;
+    margin-left: 2rem;
 `;
 
 export const Movies = styled.div`

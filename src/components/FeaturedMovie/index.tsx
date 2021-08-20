@@ -1,6 +1,7 @@
 import React from 'react';
 import { Movie } from '../../pages/Dashboard';
-import { FiPlus, FiPlay } from "react-icons/fi";
+import { BiPlay, BiPlus } from "react-icons/bi";
+
 import { Container, MovieInfo, Button } from './styles';
 
 type Props = {
@@ -16,8 +17,6 @@ export function FeaturedMovie({movie}:Props){
         genres.push(movie.genres[i].name);
     }
 
-
-
     return(
         <Container style={{backgroundImage:`url(${image ? image: ''})`}}>
             <div className="verticalTransparency">
@@ -32,18 +31,24 @@ export function FeaturedMovie({movie}:Props){
                             <span className="number-of-seasons">{movie.number_of_seasons} temporada{
                                 movie.number_of_seasons !== 1 ? 's':''}
                             </span>
-                            <p>{movie.overview}</p>
-
-                            <div className="container-buttons">
-                                <Button>Assistir</Button>
-                                <Button>Minha Lista</Button>
-                            </div>
-
-                            <div className="filmGenre">
-                                <strong>Gêneros: </strong>
-                                {genres.join(', ')}
-                            </div> 
                         </div>
+                        <p className="overview">{movie.overview}</p>
+
+                        <div className="container-buttons">
+                            <Button className="button-play">
+                                <BiPlay/>
+                                Assistir
+                            </Button>
+                            <Button className="button-list">
+                                <BiPlus/>
+                                Minha Lista
+                            </Button>
+                        </div>
+
+                        <div className="filmGenre">
+                            <strong>Gêneros: </strong>
+                            {genres.join(', ')}
+                        </div> 
                     </MovieInfo>
                 </div>
             </div>

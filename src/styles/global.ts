@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 
     :root{
         --background: #111;
-        --text-white:#fff;
+        --white:#fff;
     }
 
     html{
@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body{
         background-color: var(--background);
-        color: var(--text-white);
+        color: var(--white);
         font-family: 'Roboto', sans-serif;
     }
 
