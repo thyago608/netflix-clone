@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { Container } from './styles';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.svg';
 import user from '../../assets/images/user.png';
 
 

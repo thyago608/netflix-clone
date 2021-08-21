@@ -37,6 +37,10 @@ export const Movies = styled.div`
             font-size: 3rem;
             color: white;
         }
+
+        @media(max-width:800px){
+            opacity: 1;
+        }
     }
     .previous{
         left: 0;

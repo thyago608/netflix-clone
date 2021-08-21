@@ -28,6 +28,12 @@ export const Container = styled.div`
             padding: 4.5rem 0 10rem 2rem;
         }
     }
+
+    @media(max-width: 800px){
+        .horizontalTransparency{
+            background:none;
+        }
+    }
 `;
 
 export const MovieInfo = styled.section`

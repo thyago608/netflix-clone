@@ -3,6 +3,7 @@ import { ListMovie } from '../../components/ListMovie';
 import { FeaturedMovie } from '../../components/FeaturedMovie';
 import { Header } from '../../components/Header';
 import tmdb from '../../services/tmdb';
+import loading from '../../assets/images/loading.gif';
 import { Container } from './styles';
 
 type FilmGenre = {
@@ -35,7 +36,6 @@ type MovieCategories = {
 export function Dashboard(){
     const [moviesCategories, setMoviesCategories] = useState<MovieCategories[]>([]);
     const [featuredMovie, setFeaturedMovie] = useState<Movie>({} as Movie);
-    const [headerBlack, setHeaderBlack] = useState(false);
 
     useEffect(()=>{
         const loadMovies = async() =>{
@@ -62,13 +62,22 @@ export function Dashboard(){
         loadMovies();
     },[])
 
+
     return(
         <Container>
             <Header />
-            {featuredMovie && <FeaturedMovie movie={featuredMovie}/>}
-            {moviesCategories.map((category)=>(
-                <ListMovie key={category.title} title={category.title} movies={category.items.results}/>
-            ))}
+            { (moviesCategories.length > 0) ? (
+                <div>
+                   {featuredMovie && <FeaturedMovie movie={featuredMovie}/>}
+                   {moviesCategories.map((category)=>(
+                       <ListMovie key={category.title} title={category.title} movies={category.items.results}/>
+                   ))}
+               </div>
+            ):
+            <div className="loading">
+                <img src={loading} alt="loading"/>
+            </div>
+        }
 
             <footer>
                 <p>Cloning the Neflix<span role="img" arial-label="heart">❤️</span> home page</p>

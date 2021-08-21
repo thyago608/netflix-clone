@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 
     :root{
         --background: #000000;
+        --red:#e50914;
         --white:#fff;
     }
 

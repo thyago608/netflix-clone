@@ -40,10 +40,10 @@ export function ListMovie({title, movies}:Props){
         //Largura de lista
         let listWidth = movies.length * 150;
         
-        if((innerWidth - listWidth) > x){
+        if((listWidth - window.innerWidth) > x){
             x = (window.innerWidth - listWidth) - 60;
         }
-
+  
         setScrollX(x);
     }
    
