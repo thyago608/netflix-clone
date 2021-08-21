@@ -15,11 +15,48 @@ export const Container = styled.section`
 
 export const Movies = styled.div`
     overflow-x: hidden;
+
+    .previous, .next{
+        height: 15.3rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.8);
+
+        cursor: pointer;
+        opacity: 0;
+        border: 0;
+        transition: opacity 0.4s ease;
+
+        svg{
+            font-size: 3rem;
+            color: white;
+        }
+    }
+    .previous{
+        left: 0;
+    }
+
+    .next{
+        right: 0;
+    }
+
+    &:hover{
+        .previous, .next{
+            opacity: 1;
+        }
+    }
 `;
 
 export const List = styled.div`
-    width: 99999px;
     display: flex;
+    transition: margin 0.7s ease;
+
 
     .movie{
         width: 10rem;
