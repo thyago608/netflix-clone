@@ -1,12 +1,84 @@
 import styled from 'styled-components';
+import { BiGlobe } from "react-icons/bi"
 import banner from '../../assets/images/banner.png';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+   
+`;
 
-export const Header = styled.header``;
+export const Header = styled.header`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background: transparent;
+
+    height: 5rem;
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav{
+        margin-left: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container-logo{
+        height: 1.5rem;
+    }
+
+    .select-language{
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 120px;
+        height: 1.8rem;
+        padding-left: 1.5rem;
+        background: transparent;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .toEnter{
+        margin-left: 1.6rem;
+
+        padding: 0.5rem 0.8rem;        
+
+        border: 0;
+        border-radius: 2px;
+        
+        font-size: 1rem;
+        background: var(--red);
+        color: var(--white);
+        transition: filter 0.2s ease;
+
+        &:hover{
+            filter:brightness(0.8);
+        }
+    }
+
+    @media(min-width: 551px) and (max-width: 590px){
+        .container-logo{
+            height: 2rem;
+        }
+
+        .select-language{
+            height: 2rem;
+        }
+
+        .toEnter{
+            height: 2.3rem;
+            padding: 0 1.3rem;
+        }
+    }
+`;
 
 export const Banner = styled.div`
-    height: 52vh;
+    height: 60vh;
     background-image: url(${banner});
     background-position: center;
     background-repeat: no-repeat;

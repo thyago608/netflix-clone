@@ -1,11 +1,29 @@
 import React from 'react';
-import { BiChevronRight } from "react-icons/bi";
+import { BiChevronRight,BiGlobe } from "react-icons/bi";
 import logo from '../../assets/images/logo.svg';
 import { Container, Header, Banner, MainInformation} from './styles';
 
 export function Home(){
     return(
         <Container>
+            <Header>
+                <div className="container-logo">
+                    <img src={logo} alt="logo"/>
+                </div>
+
+                <nav>
+                    <select className="select-language">
+                        <option value="pt-br">
+                            Português
+                        </option>
+                    </select>
+
+                    <button className="toEnter">
+                        Entrar
+                    </button>
+                </nav>
+
+            </Header>
             <Banner>
                 <div className="verticalTransparency">
                    <div className="horizontalTransparency">
@@ -32,8 +50,6 @@ export function Home(){
                     </div>    
                 </div>
             </Banner>
-        
-        
         </Container>
     );
 }
