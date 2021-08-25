@@ -15,7 +15,8 @@ export const Header = styled.header`
     background: transparent;
 
     height: 5.4rem; //85px
-    padding: 0 1.5rem;
+    padding: 0 1.8rem;
+    margin-top: 0.1rem;
 
     display: flex;
     justify-content: space-between;
@@ -36,13 +37,13 @@ export const Header = styled.header`
 
     .wrapper-select{
         width: 110px;
-        height: 1.9rem;
+        height: 1.7rem;
 
         display: flex;
         align-items: center;
         justify-content:flex-end;
         border: 1px solid var(--white);
-        border-radius: 4px;
+        border-radius: 2px;
 
         position: relative;
 
@@ -52,6 +53,7 @@ export const Header = styled.header`
             top: 20%;
             left: 0.125rem;
             pointer-events: none;
+            margin: 0 0.1rem;
         }
 
         &::after{
@@ -86,7 +88,7 @@ export const Header = styled.header`
     .toEnter{
         margin-left: 0.8rem;
 
-        padding: 0.2rem 0.45rem;        
+        padding: 0.3rem 0.5rem;        
 
         border: 0;
         border-radius: 2px;
@@ -125,7 +127,7 @@ export const Header = styled.header`
 `;
 
 export const Banner = styled.div`
-    height: 80vh;
+    height: 78vh;
     background-image: url(${banner});
     background-position: center;
     background-repeat: no-repeat;
@@ -134,14 +136,14 @@ export const Banner = styled.div`
     .verticalTransparency{
         width: inherit;
         height: inherit;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.99) 3%, rgba(40,40,40,0.3), rgba(7,7,7, 0.85));
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 1%, transparent, rgba(7,7,7, 0.85));
   
   
         .horizontalTransparency{
             width: inherit;
             height: inherit;
-            background: linear-gradient(to right, rgba(0,0,0,0.3), transparent, rgba(0,0,0,0.3));
-
+            background: linear-gradient(to right, rgba(0,0,0,0.2), transparent, rgba(0,0,0,0.3));
+        
             display: flex;
             justify-content: center;
             align-items: center;
@@ -151,24 +153,20 @@ export const Banner = styled.div`
     @media(min-width: 551px) and (max-width: 590px){
         height: 100vh;
         background-position-x: 50%;
-
-        .verticalTransparency{
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(40,40,40,0.3), rgba(7,7,7,0.85));
-        }
     }
 `;
 
 
 export const MainInformation = styled.section`
     padding: 1.5rem;
-    margin-top: 2rem;
+    margin-top:3rem;
 
     display: flex;
     flex-direction: column;
     align-items:center;
 
     .title{
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         text-align: center;
 
         span{
@@ -178,14 +176,14 @@ export const MainInformation = styled.section`
 
     .watchOrCancel{
         margin-top: 0.5rem;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         text-align: center;
     }
 
     .readyToWatch{
         margin-top: 1rem;
         
-        font-size: 1.15rem;
+        font-size: 1rem;
         line-height: 1.7rem;
         text-align: center;
         max-width: 70%;
@@ -193,7 +191,7 @@ export const MainInformation = styled.section`
 
     .form-user{
         width: 100%;
-        margin-top: 0.7rem;
+        margin-top: 0.3rem;
     }
 
     .input-button{
@@ -201,21 +199,38 @@ export const MainInformation = styled.section`
         justify-content: center;
         flex-wrap: wrap;
 
+        position: relative;
+
         input{
             width: 100%;
-            padding: 1rem;
-            border-radius: 2px;
+            padding: 0.8rem 0.6rem;
+            border-radius: 1px;
             outline: transparent;
+            border-color:transparent;
+            transition: all 2s ease;
+
+            &::placeholder{
+                opacity: 0;
+            }
+            
+            &:focus + .span-label{
+                padding-top: 0.3rem;
+                font-size: 0.8rem;
+            }
+
+            &:focus{
+                border-color: #3498db;
+            }
         }
 
         button{
             border: 0;
             border-radius: 2px;
 
-            margin-top: 1rem;
+            margin-top: 0.8rem;
 
-            width: 7rem;
-            height: 2.7rem;
+            height: 2.5rem;
+            padding: 0 0.7rem;
 
             background: var(--red);
             color: var(--white);
@@ -225,12 +240,30 @@ export const MainInformation = styled.section`
             align-items: center;
             justify-content: center;
 
+            cursor: pointer;
+            transition: filter 0.1s ease;
+
+            &:hover{
+                filter: brightness(1.1);
+            }
+
             svg{
                 font-size: 1.4rem;
             }
         }
-    }
 
+        .span-label{
+            font-size: 0.9rem;
+            color: gray;
+            position: absolute;
+
+            top:0;
+            left:0;
+            padding: 1rem 0 0 0.8rem;
+
+            transition: all 0.2s ease;
+        }
+    }
 
     @media(min-width: 551px) and (max-width: 590px){
         .title{

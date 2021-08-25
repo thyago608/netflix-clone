@@ -1,7 +1,17 @@
 import React from 'react';
+
 import { BiChevronRight, BiGlobe } from "react-icons/bi";
-import logo from '../../assets/images/logo.svg';
 import { SectionInfo } from '../../components/SectionInfo';
+
+import logo from '../../assets/images/logo.svg';
+import tv from '../../assets/images/tv.png';
+import girlStrangerThings from '../../assets/images/girl-stranger-things.png';
+import strangerThingsCapa from '../../assets/images/stranger-things.png';
+import devicePile from '../../assets/images/device-pile.png';
+import videoTvFirst from '../../assets/video/video-tv-first.mp4';
+import videoDevice from '../../assets/video/video-device.mp4';
+
+
 import { Container, Header, Banner, MainInformation} from './styles';
 
 export function Home(){
@@ -47,6 +57,7 @@ export function Home(){
                             <form className="form-user">
                                 <div className="input-button">
                                     <input type="email" placeholder="Email" />
+                                    <span className="span-label">Email</span>
                                     <button className="letsgo">
                                         Vamos lá
                                         <BiChevronRight/>
@@ -60,10 +71,25 @@ export function Home(){
 
             <div>
                 <SectionInfo
+                    className="enjoyOnTv"
                     title="Aproveite na TV."
                     info="Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos."
-                >
-                </SectionInfo>
+                    image={tv}
+                    video={videoTvFirst}
+                />
+
+                <SectionInfo
+                    title="Baixe séries para assistir offline."
+                    info="Salve seus títulos favoritos e sempre tenha algo para assistir."
+                    image={girlStrangerThings}
+                />
+                
+                <SectionInfo className="watchWheneverYouWant"
+                    title="Assista quando quiser."
+                    info="Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso."
+                    image={devicePile}
+                    video={videoDevice}
+                />
             </div>
         </Container>
     );
