@@ -1,6 +1,7 @@
 import React from 'react';
-import { BiChevronRight,BiGlobe } from "react-icons/bi";
+import { BiChevronRight, BiGlobe } from "react-icons/bi";
 import logo from '../../assets/images/logo.svg';
+import { SectionInfo } from '../../components/SectionInfo';
 import { Container, Header, Banner, MainInformation} from './styles';
 
 export function Home(){
@@ -12,11 +13,17 @@ export function Home(){
                 </div>
 
                 <nav>
-                    <select className="select-language">
-                        <option value="pt-br">
-                            Português
-                        </option>
-                    </select>
+                    <div className="wrapper-select">
+                        <BiGlobe/>
+                        <select className="select-language">
+                            <option value="pt-br">
+                                Português
+                            </option>
+                            <option value="pt-br">
+                                English
+                            </option>
+                        </select>
+                    </div>
 
                     <button className="toEnter">
                         Entrar
@@ -50,6 +57,14 @@ export function Home(){
                     </div>    
                 </div>
             </Banner>
+
+            <div>
+                <SectionInfo
+                    title="Aproveite na TV."
+                    info="Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos."
+                >
+                </SectionInfo>
+            </div>
         </Container>
     );
 }

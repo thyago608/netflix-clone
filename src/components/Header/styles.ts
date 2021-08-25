@@ -18,7 +18,8 @@ export const Container = styled.header`
     transition: background 0.5s ease;
 
     .container-image-logo{
-        height: 2rem;
+        height: 3rem;
+
     }
 
     .container-image-user{

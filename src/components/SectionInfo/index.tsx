@@ -11,9 +11,9 @@ export function SectionInfo({title, info,children}:Props){
     return(
         <Container>
             <header>
-                <h1>{title}</h1>
+                <h1 className="title">{title}</h1>
             </header>
-            <p>{info}</p>
+            <p className="info">{info}</p>
             <div className="animation">
                 {children}
             </div>

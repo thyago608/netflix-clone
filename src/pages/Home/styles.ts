@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { BiGlobe } from "react-icons/bi"
 import banner from '../../assets/images/banner.png';
 
 export const Container = styled.div`
@@ -11,11 +10,12 @@ export const Header = styled.header`
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 
     background: transparent;
 
-    height: 5rem;
-    padding: 0 2rem;
+    height: 5.4rem; //85px
+    padding: 0 1.5rem;
 
     display: flex;
     justify-content: space-between;
@@ -23,30 +23,70 @@ export const Header = styled.header`
 
     nav{
         margin-left: 1rem;
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
     .container-logo{
-        height: 1.5rem;
+        height: 1.6rem;
     }
 
-    .select-language{
-        border: 1px solid white;
-        border-radius: 3px;
-        width: 120px;
-        height: 1.8rem;
+
+    .wrapper-select{
+        width: 110px;
+        height: 1.9rem;
+
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        border: 1px solid var(--white);
+        border-radius: 4px;
+
+        position: relative;
+
+        svg{
+            font-size: 1rem;
+            position: absolute;
+            top: 20%;
+            left: 0.125rem;
+            pointer-events: none;
+        }
+
+        &::after{
+            content: "";            
+            width: 0.7rem;
+            height: 0.4rem;
+
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(180deg);
+            position: absolute;
+            background: var(--white);
+            margin-right: 0.7rem;
+        }
+    }
+
+    .select-language{    
         padding-left: 1.5rem;
+        width: 100%;
+        height: 100%;
         background: transparent;
         color: white;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        -webkit-appearance: none;
+        outline: transparent;
+        border: 0;
+
+        option{
+            background: gray;
+        }
     }
 
     .toEnter{
-        margin-left: 1.6rem;
+        margin-left: 0.8rem;
 
-        padding: 0.5rem 0.8rem;        
+        padding: 0.2rem 0.45rem;        
 
         border: 0;
         border-radius: 2px;
@@ -55,6 +95,7 @@ export const Header = styled.header`
         background: var(--red);
         color: var(--white);
         transition: filter 0.2s ease;
+        cursor:pointer;
 
         &:hover{
             filter:brightness(0.8);
@@ -75,10 +116,16 @@ export const Header = styled.header`
             padding: 0 1.3rem;
         }
     }
+
+    @media(min-width: 590px){
+        .wrapper-select{
+            width: 120px;
+        }
+    }
 `;
 
 export const Banner = styled.div`
-    height: 60vh;
+    height: 80vh;
     background-image: url(${banner});
     background-position: center;
     background-repeat: no-repeat;
