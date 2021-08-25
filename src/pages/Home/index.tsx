@@ -8,6 +8,7 @@ import tv from '../../assets/images/tv.png';
 import girlStrangerThings from '../../assets/images/girl-stranger-things.png';
 import strangerThingsCapa from '../../assets/images/stranger-things.png';
 import devicePile from '../../assets/images/device-pile.png';
+import childrenPhoto from '../../assets/images/children.png';
 import videoTvFirst from '../../assets/video/video-tv-first.mp4';
 import videoDevice from '../../assets/video/video-device.mp4';
 
@@ -69,7 +70,7 @@ export function Home(){
                 </div>
             </Banner>
 
-            <div>
+            <section>
                 <SectionInfo
                     className="enjoyOnTv"
                     title="Aproveite na TV."
@@ -90,7 +91,21 @@ export function Home(){
                     image={devicePile}
                     video={videoDevice}
                 />
-            </div>
+
+                <SectionInfo className="createProfileForChildren"
+                    title="Crie perfis para crianças."
+                    info="Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso."
+                    image={childrenPhoto}
+                />
+            </section>
+        
+            <section>
+                <header>
+                    <h1>Perguntas frequentes</h1>
+                    
+                </header>
+            </section>
+        
         </Container>
     );
 }

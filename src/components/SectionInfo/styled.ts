@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    padding: 1.6rem 2.1rem 2.1rem 2rem;
+    padding: 1.8rem 2.1rem 3rem 2rem;
     border-top: 8px solid #222;
     position: relative;
 
@@ -31,13 +31,34 @@ export const Container = styled.section`
 
         position: relative;
         overflow: hidden;
+
+        img{
+            object-fit: cover;
+        }
     }
     
-    &.watchWheneverYouWant{
+    &.enjoyOnTv{
+        padding: 1.8rem 2.1rem 2.5rem 2rem;
+
         .container-image-video{
-            img{
-                object-fit: cover;
+
+            video{
+                width: 73%;
+                height: 70%;
+
+                position: absolute;
+                top:13%;
+                left:13.2%;
+                z-index: -1;
             }
+
+        }
+    }
+
+    &.watchWheneverYouWant{
+        padding: 2rem 2.1rem 3.75rem 2rem;
+
+        .container-image-video{
 
             video{
                 width:65%;
@@ -52,23 +73,8 @@ export const Container = styled.section`
         }
     }
 
-    &.enjoyOnTv{
-        .container-image-video{
-            img{
-                object-fit: cover;
-            }
-
-            video{
-                width: 73%;
-                height: 70%;
-
-                position: absolute;
-                top:13%;
-                left:13.2%;
-                z-index: -1;
-            }
-
-        }
+    &.createProfileForChildren{
+        border-bottom: 8px solid #222;
     }
 
 `;
