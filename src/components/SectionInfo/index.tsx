@@ -1,4 +1,4 @@
-import React,{ReactNode,HTMLAttributes} from 'react';
+import React,{ HTMLAttributes } from 'react';
 import { Container } from './styled';
 
 interface Props extends HTMLAttributes<any> {
@@ -6,7 +6,6 @@ interface Props extends HTMLAttributes<any> {
     info: string;
     image: string;
     video?:string;
-    children?:ReactNode;
 }
 
 export function SectionInfo({title, info, image, video, children, ...rest}:Props){

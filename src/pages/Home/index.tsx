@@ -3,7 +3,9 @@ import React from 'react';
 import { BiChevronRight, BiGlobe } from "react-icons/bi";
 import { SectionInfo } from '../../components/SectionInfo';
 
-import logo from '../../assets/images/logo.svg';
+import { Question } from '../../components/Question';
+
+import logo from '../../assets/images/logo.svg';''
 import tv from '../../assets/images/tv.png';
 import girlStrangerThings from '../../assets/images/girl-stranger-things.png';
 import strangerThingsCapa from '../../assets/images/stranger-things.png';
@@ -13,7 +15,8 @@ import videoTvFirst from '../../assets/video/video-tv-first.mp4';
 import videoDevice from '../../assets/video/video-device.mp4';
 
 
-import { Container, Header, Banner, MainInformation} from './styles';
+import { Container, Header, Banner, MainInformation, SectionReadyToWatch} from './styles';
+import { CommonQuestions } from '../../components/CommonQuestions';
 
 export function Home(){
     return(
@@ -99,13 +102,21 @@ export function Home(){
                 />
             </section>
         
-            <section>
-                <header>
-                    <h1>Perguntas frequentes</h1>
-                    
-                </header>
-            </section>
+            <CommonQuestions/>
         
+            <SectionReadyToWatch>
+                <header>
+                    <h1>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h1>
+                </header>
+                <div className="input-block">
+                    <input type="text"/>
+
+                    <button className="letsgo">
+                        Vamos lá
+                        <BiChevronRight/>
+                    </button>
+                </div>
+            </SectionReadyToWatch>
         </Container>
     );
 }
