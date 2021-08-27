@@ -3,7 +3,7 @@ import React from 'react';
 import { BiChevronRight, BiGlobe } from "react-icons/bi";
 import { SectionInfo } from '../../components/SectionInfo';
 
-import { Question } from '../../components/Question';
+import { Footer } from '../../components/Footer';
 
 import logo from '../../assets/images/logo.svg';''
 import tv from '../../assets/images/tv.png';
@@ -119,6 +119,7 @@ export function Home(){
                     </button>
                 </div>
             </SectionReadyToWatch>
+            <Footer/>
         </Container>
     );
 }

@@ -288,8 +288,7 @@ export const MainInformation = styled.section`
 `;
 
 export const SectionReadyToWatch = styled.section`
-    padding: 2rem 0 3rem 0;
-
+    padding: 1.5rem 0 3.2rem 0;
     border-bottom: 8px solid #222;
 
     h1{
@@ -305,16 +304,18 @@ export const SectionReadyToWatch = styled.section`
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
         input{
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             width: 100%;
-            height: 3rem;
+            height: 2.8rem;
         }
+        
         button{
             border: 0;
             border-radius: 2px;
 
-            margin-top: 0.8rem;
+            margin-top: 0.75rem;
 
             height: 2.5rem;
             padding: 0 0.7rem;

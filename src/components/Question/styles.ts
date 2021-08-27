@@ -6,7 +6,7 @@ interface Props{
 
 export const Container = styled.button<Props>`
     width: 100%;
-    height: ${props => props.active ? '100%':'3rem'};
+    height: ${props => props.active ? '100%':'3.2rem'};
     overflow: ${props => props.active ? 'none':'hidden'};
     
     border: 0;
@@ -21,8 +21,6 @@ export const Container = styled.button<Props>`
     }
 
     .topButton{
-        border-bottom: 1px solid black;
-
         padding: 0 1rem;
         height: 3rem;
 
