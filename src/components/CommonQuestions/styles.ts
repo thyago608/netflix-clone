@@ -5,7 +5,8 @@ export const Container = styled.section`
 
     h1{
         text-align: center;
-        margin-bottom: 1rem;
+        font-size:1.53rem;
+        margin-bottom: 1.4rem;
     }
 
 `;

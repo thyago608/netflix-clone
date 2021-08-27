@@ -38,7 +38,7 @@ export const Container = styled.section`
     }
     
     &.enjoyOnTv{
-        padding: 1.8rem 2.1rem 2.5rem 2rem;
+        padding: 1.4rem 2.1rem 2.95rem 2rem;
 
         .container-image-video{
 
@@ -53,6 +53,10 @@ export const Container = styled.section`
             }
 
         }
+    }
+
+    &.downloadSeriesToWatchOffline{
+        padding-bottom: 3.2rem;
     }
 
     &.watchWheneverYouWant{
@@ -75,6 +79,7 @@ export const Container = styled.section`
 
     &.createProfileForChildren{
         border-bottom: 8px solid #222;
+        padding-bottom: 5rem;
     }
 
 `;

@@ -83,12 +83,14 @@ export function Home(){
                 />
 
                 <SectionInfo
+                    className="downloadSeriesToWatchOffline"
                     title="Baixe séries para assistir offline."
                     info="Salve seus títulos favoritos e sempre tenha algo para assistir."
                     image={girlStrangerThings}
                 />
                 
-                <SectionInfo className="watchWheneverYouWant"
+                <SectionInfo 
+                    className="watchWheneverYouWant"
                     title="Assista quando quiser."
                     info="Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso."
                     image={devicePile}

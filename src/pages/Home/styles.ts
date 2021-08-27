@@ -14,7 +14,7 @@ export const Header = styled.header`
 
     background: transparent;
 
-    height: 5.4rem; //85px
+    height: 4.5rem; //85px
     padding: 0 1.8rem;
     margin-top: 0.1rem;
 
@@ -31,13 +31,13 @@ export const Header = styled.header`
     }
 
     .container-logo{
-        height: 1.6rem;
+        height: 1.5rem;
     }
 
 
     .wrapper-select{
         width: 110px;
-        height: 1.7rem;
+        height: 1.6rem;
 
         display: flex;
         align-items: center;
@@ -88,12 +88,12 @@ export const Header = styled.header`
     .toEnter{
         margin-left: 0.8rem;
 
-        padding: 0.3rem 0.5rem;        
+        padding: 0.27rem 0.5rem;        
 
         border: 0;
         border-radius: 2px;
         
-        font-size: 1rem;
+        font-size: 0.9rem;
         background: var(--red);
         color: var(--white);
         transition: filter 0.2s ease;
@@ -127,7 +127,7 @@ export const Header = styled.header`
 `;
 
 export const Banner = styled.div`
-    height: 78vh;
+    height: 76vh;
     background-image: url(${banner});
     background-position: center;
     background-repeat: no-repeat;

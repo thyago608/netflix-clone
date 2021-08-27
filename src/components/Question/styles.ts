@@ -1,26 +1,37 @@
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
 
 interface Props{
     active:boolean;
 }
 
 export const Container = styled.button<Props>`
-    height: ${props => props.active ? '100%': '3.2rem'};
+    width: 100%;
+    height: ${props => props.active ? '100%':'3rem'};
+    overflow: ${props => props.active ? 'none':'hidden'};
+    
     border: 0;
 
-    overflow: hidden;
-
     background: var(--gray);
-    padding: 1rem;
+
     color: var(--white);
     cursor:pointer;
-    
+
+    & + button{
+        margin-top: 0.5rem;
+    }
+
     .topButton{
+        border-bottom: 1px solid black;
+
+        padding: 0 1rem;
+        height: 3rem;
+
         display: flex;
         justify-content: space-between;
-
+        align-items: center;
+        
         h2{
-            font-size: 1.2rem;
+            font-size: 1.09rem;
             font-weight: normal;
         }
 
@@ -29,15 +40,18 @@ export const Container = styled.button<Props>`
         }
     }
 
-    p{
-        margin-top: 1rem;
-        font-size: 1.125rem;
-        text-align: left;
+    .paragraphs{
+        padding: 1rem;
+        background: var(--gray);
+
+        p{
+            font-size: 1.125rem;
+            text-align: left;
+        
+            & + p{
+                margin-top: 1rem;
+            }
+        }
     }
 
-    & + button{
-        margin-top: 0.5rem;
-    }  
-    
-    
 `;
