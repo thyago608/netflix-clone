@@ -13,12 +13,11 @@ interface Props{
 export function Question({title, buttonChange, active, children}:Props){
 
     return(
-        <Container onClick={buttonChange} active={active}>
-            <div className="topButton">
+        <Container active={active}>
+            <button onClick={buttonChange}>
                 <h2>{title}</h2>
                 {active ?  <BiX/>:<BiPlus/>}
-            </div>
-
+            </button>
             <div className="paragraphs">
                 {children}
             </div>

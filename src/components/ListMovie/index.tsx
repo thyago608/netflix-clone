@@ -38,7 +38,7 @@ export function ListMovie({title, movies}:Props){
        //Valor que a lista irá se mover
         let x = scrollX - Math.round(window.innerWidth / 2);
         //Largura de lista
-        let listWidth = movies.length * 150;
+        let listWidth = movies.length * 144;
         
         if((listWidth - window.innerWidth) > x){
             x = (window.innerWidth - listWidth) - 60;

@@ -18,16 +18,12 @@ export const Container = styled.header`
     transition: background 0.5s ease;
 
     .container-image-logo{
-        height: 3rem;
+        height: 2rem;
 
     }
 
     .container-image-user{
-        height: 2.8rem;
-
-        img{
-            border-radius: 2px;
-        }
+        height: 2.2rem;
     }
 
 

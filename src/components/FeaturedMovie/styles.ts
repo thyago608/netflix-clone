@@ -44,12 +44,12 @@ export const MovieInfo = styled.section`
     }
     
     .original-name{
-        font-size:3.5rem;
+        font-size:3rem;
     }
 
     .description{
         margin-top: 1rem;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
 
         max-width:275px;
 
@@ -72,7 +72,7 @@ export const MovieInfo = styled.section`
         overflow: hidden;
 
         p{
-            font-size: 1.25rem;
+            font-size: 1.17rem;
             font-weight: normal;
             color: #9999;
         }
@@ -101,7 +101,7 @@ export const Button = styled.button`
     justify-content: center;
     align-items: center;
 
-    font-size: 1.25rem;
+    font-size: 1.02rem;
     padding: 0.5rem 0.8rem;
     
     transition: filter 0.2s ease;

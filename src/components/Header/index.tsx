@@ -1,4 +1,5 @@
 import React,{ useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Container } from './styles';
 import logo from '../../assets/images/logo.svg';
 import user from '../../assets/images/user.png';
@@ -24,9 +25,9 @@ export function Header(){
  
     return(
         <Container className={isBlack ? 'header-black':''}>
-            <div className="container-image-logo">
+            <Link to="/" className="container-image-logo">
                 <img src={logo} alt="logo"/>
-            </div>
+            </Link>
             <div className="container-image-user">
                 <img src={user} alt="user" />
             </div>

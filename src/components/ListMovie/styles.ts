@@ -6,7 +6,7 @@ export const Container = styled.section`
     }
 
     > h2{
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
     }
 
     margin-left: 2rem;
@@ -63,7 +63,7 @@ export const List = styled.div`
 
 
     .movie{
-        width: 10rem;
+        width: 9rem;
         cursor:pointer;
 
         img{

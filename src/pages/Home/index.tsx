@@ -1,8 +1,8 @@
-import React from 'react';
-
+import React, { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { BiChevronRight, BiGlobe } from "react-icons/bi";
-import { SectionInfo } from '../../components/SectionInfo';
 
+import { SectionInfo } from '../../components/SectionInfo';
 import { Footer } from '../../components/Footer';
 
 import logo from '../../assets/images/logo.svg';''
@@ -15,10 +15,41 @@ import videoTvFirst from '../../assets/video/video-tv-first.mp4';
 import videoDevice from '../../assets/video/video-device.mp4';
 
 
-import { Container, Header, Banner, MainInformation, SectionReadyToWatch} from './styles';
+import { Container, Header, Banner, MainInformation, SectionReadyToWatch, WrapperSelect} from './styles';
 import { CommonQuestions } from '../../components/CommonQuestions';
 
 export function Home(){
+    const [error, setError] = useState('');
+    const [withValue, setWithValue] = useState('');
+    const inputRef = useRef<HTMLInputElement>(null);
+    const history = useHistory();
+
+    function handleNavigateToListMovies(){
+        history.push('/movies');
+    }
+
+    function handleInputChange(){
+        //Recuperando o valor que está no input
+        const inputValue = inputRef.current?.value;
+
+        const characterExists = inputValue?.indexOf('@');
+
+        const emptyValue = inputValue === '';
+
+
+        if(emptyValue){
+            setError('O email é obrigatório.');
+            setWithValue('');
+            return;
+        }
+        
+        if(characterExists === -1){
+            setError('Insira um email válido.');
+            setWithValue('active');
+            return;
+        }
+    }
+
     return(
         <Container>
             <Header>
@@ -27,7 +58,7 @@ export function Home(){
                 </div>
 
                 <nav>
-                    <div className="wrapper-select">
+                    <WrapperSelect>
                         <BiGlobe/>
                         <select className="select-language">
                             <option value="pt-br">
@@ -37,14 +68,14 @@ export function Home(){
                                 English
                             </option>
                         </select>
-                    </div>
+                    </WrapperSelect>
 
-                    <button className="toEnter">
+                    <button type="button" className="toEnter">
                         Entrar
                     </button>
                 </nav>
-
             </Header>
+
             <Banner>
                 <div className="verticalTransparency">
                    <div className="horizontalTransparency">
@@ -60,9 +91,15 @@ export function Home(){
                             
                             <form className="form-user">
                                 <div className="input-button">
-                                    <input type="email" placeholder="Email" />
-                                    <span className="span-label">Email</span>
-                                    <button className="letsgo">
+                                    <input 
+                                        type="email" 
+                                        placeholder="Email" 
+                                        ref={inputRef}
+                                        onChange={handleInputChange}
+                                    />
+                                    <span className={`span-label ${withValue}`}>Email</span>
+                                    <span className="error">{error}</span>
+                                    <button type="button" className="letsgo" onClick={handleNavigateToListMovies}>
                                         Vamos lá
                                         <BiChevronRight/>
                                     </button>

@@ -1,33 +1,26 @@
-import styled,{css} from 'styled-components';
+import styled from 'styled-components';
 
 interface Props{
     active:boolean;
 }
 
-export const Container = styled.button<Props>`
-    width: 100%;
-    height: ${props => props.active ? '100%':'3.2rem'};
-    overflow: ${props => props.active ? 'none':'hidden'};
+export const Container = styled.section<Props>`
     
-    border: 0;
+    button{
+        border: 0;
 
-    background: var(--gray);
-
-    color: var(--white);
-    cursor:pointer;
-
-    & + button{
-        margin-top: 0.5rem;
-    }
-
-    .topButton{
+        width: 100%;
+        height: 3.2rem;
         padding: 0 1rem;
-        height: 3rem;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
         
+        color: var(--white);
+        cursor: pointer;
+        background: var(--gray);
+
         h2{
             font-size: 1.09rem;
             font-weight: normal;
@@ -39,17 +32,27 @@ export const Container = styled.button<Props>`
     }
 
     .paragraphs{
-        padding: 1rem;
-        background: var(--gray);
-
-        p{
+       margin-top: 1px;
+       padding: 1rem;
+       background: var(--gray);
+       position: absolute;
+       z-index: -1;
+       
+       p{
             font-size: 1.125rem;
             text-align: left;
-        
+            
             & + p{
                 margin-top: 1rem;
             }
+        
+        
         }
+
+    }
+
+    & + section{
+      margin-top: 0.5rem;
     }
 
 `;
